@@ -1,9 +1,9 @@
-# Script to read the tree and change the tip names
+# Script to read Harvey et al 2020 tree and change the tip labels
 
 
 ## read in the tree
 
-tree <- ape::read.tree(file = "mgharvey-tyranni-f73aa7f/species_trees/final_timetrees/T400F_complete.tre")
+tree <- ape::read.tree(file = "data-raw/mgharvey-tyranni-f73aa7f/species_trees/final_timetrees/T400F_complete.tre")
 
 ## look at the tips
 
@@ -11,9 +11,9 @@ tree$tip.label[1:10]
 
 ## read in the matrix
 
-names <- readr::read_csv("mgharvey-tyranni-f73aa7f/Species_name_map_uids.csv")
+names <- readr::read_csv("data-raw/mgharvey-tyranni-f73aa7f/Species_name_map_uids.csv")
 
-names <- read.csv(file = "mgharvey-tyranni-f73aa7f/Species_name_map_uids.csv")
+names <- read.csv(file = "data-raw/mgharvey-tyranni-f73aa7f/Species_name_map_uids.csv")
 head(names)
 str(names)
 names <- names[, -(1:2)]
