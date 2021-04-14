@@ -34,20 +34,46 @@ tree$tip.label[1]
 tree$tip.label[997]
 spp$tipnamecodes[2618]
 
+## Create an original tip labels vector of names
+
+tree$tip.label_original <- tree$tip.label
+
 ## replace original tip labels that had tip name codes with full species names from the csv file
 
-tree$tip.label2 <- names$matrix.species[ii]
+tree$tip.label <- names$matrix.species[ii]
+
+## Replace spaces by underscores
+
+tree$tip.label <- gsub(" ", "_", tree$tip.label)
+
+## Make sure replacement was correct
+
+tree$tip.label_original[1:10]
 tree$tip.label[1:10]
-tree$tip.label2[1:10]
 
-matrix(c(tail(tree$tip.label), tail(tree$tip.label2)), ncol = 2)
+tail(tree$tip.label_original)
+tail(tree$tip.label)
 
-# Test if there are some tip labels with no species names
+
+## Test if there are any new tip labels with no species names
 
 names$tipnamecodes[which(is.na(names$matrix.species))]
 
-ina <- which(is.na(tree$tip.label2))
+# "Rhegma_berxh_LSU81109"   "Rhegma_berxh_MZUSP76895"
+
+## Use original tip name for those tips:
+
+ina <- which(is.na(tree$tip.label))
+
+tree$tip.label[ina] <- names$tipnamecodes[which(is.na(names$matrix.species))]
 
 tree$tip.label[ina]
 
-# "Rhegma_berxh_LSU81109"   "Rhegma_berxh_MZUSP76895"
+## test that we have no NAs as tip labels
+
+which(is.na(tree$tip.label))
+
+## write the tree with new tips down
+
+
+
