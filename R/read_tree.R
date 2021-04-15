@@ -59,7 +59,7 @@ tail(tree$tip.label)
 
 ## Test if there are any new tip labels with no species names
 
-names$tipnamecodes[which(is.na(names$matrix.species))]
+na_names <- names$tipnamecodes[which(is.na(names$matrix.species))]
 
 # There are a couple:
 # "Rhegma_berxh_LSU81109"   "Rhegma_berxh_MZUSP76895"
@@ -76,9 +76,28 @@ tree$tip.label[ina]
 
 which(is.na(tree$tip.label))
 
+## opentree cannot read trees with duplicated labels
+## adding unique identifier to all names
+
+id <- sapply(strsplit(tree$tip.label_original, "_"), "[", 3)
+head(id)
+
+### adding it to duplicated tip labels:
+
+tree$tip.label <- paste0(tree$tip.label, "_", id)
+
+### verifying the NA names do not have a duplicated identifier
+
+tree$tip.label[ina]
+
+### fixing the NA names
+
+tree$tip.label[ina] <- na_names
+
 ## write down the tree with new tips
 
 ape::write.tree(tree, "data/T400F_complete-renamed.tre")
+
 
 
 
