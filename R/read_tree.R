@@ -11,11 +11,13 @@ tree$tip.label[1:10]
 
 ## read in the matrix
 
-names <- readr::read_csv("data-raw/mgharvey-tyranni-f73aa7f/Species_name_map_uids.csv")
 
 names <- read.csv(file = "data-raw/mgharvey-tyranni-f73aa7f/Species_name_map_uids.csv")
 head(names)
 str(names)
+
+# removing the forst two columns without any information
+
 names <- names[, -(1:2)]
 
 # Make sure that we get the correct columns in
@@ -32,9 +34,9 @@ head(ii)
 names$tipnamecodes[3847]
 tree$tip.label[1]
 tree$tip.label[997]
-spp$tipnamecodes[2618]
+names$tipnamecodes[2618]
 
-## Create an original tip labels vector of names
+## Create a vector with the original tip labels
 
 tree$tip.label_original <- tree$tip.label
 
@@ -59,6 +61,7 @@ tail(tree$tip.label)
 
 names$tipnamecodes[which(is.na(names$matrix.species))]
 
+# There are a couple:
 # "Rhegma_berxh_LSU81109"   "Rhegma_berxh_MZUSP76895"
 
 ## Use original tip name for those tips:
@@ -69,11 +72,13 @@ tree$tip.label[ina] <- names$tipnamecodes[which(is.na(names$matrix.species))]
 
 tree$tip.label[ina]
 
-## test that we have no NAs as tip labels
+## verify that we have no NAs as tip labels
 
 which(is.na(tree$tip.label))
 
-## write the tree with new tips down
+## write down the tree with new tips
+
+ape::write.tree(tree, "data/T400F_complete-renamed.tre")
 
 
 
