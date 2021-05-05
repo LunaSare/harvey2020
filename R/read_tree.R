@@ -16,7 +16,7 @@ names <- read.csv(file = "data-raw/mgharvey-tyranni-f73aa7f/Species_name_map_uid
 head(names)
 str(names)
 
-# removing the forst two columns without any information
+# removing the first two columns without any information
 
 names <- names[, -(1:2)]
 
