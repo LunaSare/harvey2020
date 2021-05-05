@@ -7,6 +7,7 @@ R code to change tip names from Harvey et al. trees
 ### `data-raw` folder
 
 Original study data obtained from https://zenodo.org/record/3976115#.YFWaWp1KhhE
+Downloaded March 31, 2021.
 
 
 ### `data` folder
