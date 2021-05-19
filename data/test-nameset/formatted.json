@@ -1,0 +1,124 @@
+{
+  "metadata": {
+    "name": "Untitled nameset",
+    "description": "",
+    "authors": [],
+    "date_created": "2021-05-19T20:19:57.972Z",
+    "last_saved": "2021-05-19T21:17:06.819Z",
+    "save_count": 2,
+    "previous_filename": null,
+    "latest_ott_version": null
+  },
+  "mappingHints": {
+    "description": "Aids for mapping listed names to OTT taxa",
+    "searchContext": "All life",
+    "useFuzzyMatching": false,
+    "autoAcceptExactMatches": false,
+    "substitutions": [
+      {
+        "active": true,
+        "old": "_",
+        "new": " ",
+        "valid": true
+      },
+      {
+        "old": "_",
+        "new": " ",
+        "active": true,
+        "valid": true
+      },
+      {
+        "old": ".*\\s+(\\S*)\\s*$",
+        "new": "$1",
+        "active": false,
+        "valid": true
+      },
+      {
+        "old": "\\b\\s+(\\S*)$",
+        "new": "",
+        "active": true,
+        "valid": true
+      }
+    ]
+  },
+  "names": [
+    {
+      "id": "name1",
+      "originalLabel": "Synallaxis_azarae_L8177,    ",
+      "selectedForAction": false,
+      "defaultSortOrder": 0,
+      "ottId": 289379,
+      "ottTaxonName": "Synallaxis azarae",
+      "taxonomicSources": [
+        "ncbi:555352",
+        "gbif:9492770",
+        "irmng:10907664"
+      ]
+    },
+    {
+      "id": "name2",
+      "originalLabel": "Synallaxis_courseni_L58452",
+      "selectedForAction": false,
+      "defaultSortOrder": 1,
+      "ottId": 762050,
+      "ottTaxonName": "Synallaxis courseni",
+      "taxonomicSources": [
+        "ncbi:1094518",
+        "gbif:2484976",
+        "irmng:11011394"
+      ]
+    },
+    {
+      "id": "name3",
+      "originalLabel": "Synallaxis_azarae_L31671,",
+      "selectedForAction": false,
+      "defaultSortOrder": 2,
+      "ottId": 289379,
+      "ottTaxonName": "Synallaxis azarae",
+      "taxonomicSources": [
+        "ncbi:555352",
+        "gbif:9492770",
+        "irmng:10907664"
+      ]
+    },
+    {
+      "id": "name4",
+      "originalLabel": "Synallaxis_azarae_LSU1232,",
+      "selectedForAction": false,
+      "defaultSortOrder": 3,
+      "ottId": 289379,
+      "ottTaxonName": "Synallaxis azarae",
+      "taxonomicSources": [
+        "ncbi:555352",
+        "gbif:9492770",
+        "irmng:10907664"
+      ]
+    },
+    {
+      "id": "name5",
+      "originalLabel": "Synallaxis_azarae_WGAV730,",
+      "selectedForAction": false,
+      "defaultSortOrder": 4,
+      "ottId": 289379,
+      "ottTaxonName": "Synallaxis azarae",
+      "taxonomicSources": [
+        "ncbi:555352",
+        "gbif:9492770",
+        "irmng:10907664"
+      ]
+    },
+    {
+      "id": "name6",
+      "originalLabel": "Synallaxis_frontalis_L52049,",
+      "selectedForAction": false,
+      "defaultSortOrder": 5,
+      "ottId": 886241,
+      "ottTaxonName": "Synallaxis frontalis",
+      "taxonomicSources": [
+        "ncbi:478618",
+        "gbif:2484977",
+        "irmng:10220995"
+      ]
+    }
+  ]
+}
