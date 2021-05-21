@@ -29,3 +29,18 @@ You will have to create the nameset file yourself.
 
 
     < main.json jq '.' > formatted.json
+
+
+## Current behavior of importing premapped names using a CSV or TSV file.
+
+- original tip labels must match exactly. This is good.
+- adjusted labels are not included in the nameset --> Could we include an `adjusted label` value on the pre-mapped nameset to populate the `Modified for mapping` column? Alternatively, no value should appear on that column if it was not provided by the curator.
+- it does not like it when CSV or TSV nameset has a single line, gives a message saying that no matching labels were found --> allow for single lined nameset files?
+- ott taxon name can be anything. It will still link to correct taxon page, but it is potentially confusing for users. Alos, woul ddownloading the tree with OTT taxon names show the name from the nameset file or one obtained from OTT taxonomy following the OTT id? --> could we just infer the ott name from the ott id to populate the `Mapped to taxon` column?
+- names that are mapped on the curation site are automatically favored above pre-mapped names --> Should we give users a chance to review them and choose the one they prefer? Add curator notes?
+- when the nameset contains one or all names that have been already succesfully matched with the pre-mapping tool, it says "no matches were found" --> Change to "have already been succesfully matched"
+
+
+## TNRS bulk matching behaviour
+
+- when a line or value has trailing white spaces, the tool takes the white spaces as an extra value, I think
