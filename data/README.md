@@ -27,11 +27,14 @@ You will have to create the nameset file yourself.
 
 ## How to format a JSON file for "easier" reading
 
+If you have a JSON file named `main.json`, you can format it for ease of reading using [jq]() with the following command:
 
     < main.json jq '.' > formatted.json
 
 
-## Current behavior of importing premapped names using a CSV or TSV file.
+## Current behavior of importing premapped names
+
+### using a CSV file
 
 - original tip labels must match exactly. This is good.
 - adjusted labels are not included in the nameset --> Could we include an `adjusted label` value on the pre-mapped nameset to populate the `Modified for mapping` column? Alternatively, no value should appear on that column if it was not provided by the curator.
@@ -40,7 +43,16 @@ You will have to create the nameset file yourself.
 - names that are mapped on the curation site are automatically favored above pre-mapped names --> Should we give users a chance to review them and choose the one they prefer? Add curator notes?
 - when the nameset contains one or all names that have been already succesfully matched with the pre-mapping tool, it says "only N were succesfully matched" when there are N names already pre-mapped, or "no matches were found" when all names have already succesfully pre-mapped--> This gives the idea that mapping has failed. Change to "N have already been succesfully matched"?
 
+### using a TSV file
+
+- TSV namesets do not seem to work well
+
+### using a JSON file
+
+_In review_
 
 ## TNRS bulk matching behaviour
+
+_In review_
 
 - when a line or value has trailing white spaces, the tool takes the white spaces as an extra value, I think
