@@ -42,6 +42,7 @@ If you have a JSON file named `main.json`, you can format it for ease of reading
 - ott taxon name can be anything. It will still link to correct taxon page, but it is potentially confusing for users. Alos, woul ddownloading the tree with OTT taxon names show the name from the nameset file or one obtained from OTT taxonomy following the OTT id? --> could we just infer the ott name from the ott id to populate the `Mapped to taxon` column?
 - names that are mapped on the curation site are automatically favored above pre-mapped names --> Should we give users a chance to review them and choose the one they prefer? Add curator notes?
 - when the nameset contains one or all names that have been already succesfully matched with the pre-mapping tool, it says "only N were succesfully matched" when there are N names already pre-mapped, or "no matches were found" when all names have already succesfully pre-mapped--> This gives the idea that mapping has failed. Change to "N have already been succesfully matched"?
+- when the OTT id is not correct/ does not exist/ has a typo, the tools says that it was successfully mapped --> Could it check that the OTT id exists and then show a fail message?.
 
 ### using a TSV file
 
